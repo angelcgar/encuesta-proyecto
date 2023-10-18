@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Pagina de formulario</title>
+        <script src="style.css" defer></script>
+    </head>
+    <body class="fondo">
+        <div class="fondo-decolorido">
+            <header class="header">
+                <h1 id="title" class="texto-centro">Formulario de encuesta </h1>
+                <p class="description texto-centro">Por favor, rellene el formulario</p>
+            </header>
+            <form id="survey-form" method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+                <fieldset class="form-group">
+                    <label id="name-label" for="name">Nombre
+                        <input id="name" name="name" type="text" placeholder="Ingrese su nombre" required class="form-control" />
+                    </label>
+                    <label id="email-label" for="email">Email
+                        <input id="email" name="email" type="email" placeholder="Ingrese su Email" required class="form-control" />
+                    </label>
+                    <label id="number-label" for="number">Edad
+                        <input id="number" name="edad" type="number" min="13" max="120" placeholder="25 años" class="form-control" />
+                    </label>
+                </fieldset>
+                <fieldset class="form-group">
+                    <h2>¿Cual cree que sea su rol en la comunidad en la que vive?</h2>
+                    <select id="dropdown" class="form-control">
+                        <option value="opcional">Opcional</option>
+                        <option value="red-social">Contribuyente</option>
+                        <option value="anuncios">Ciudadano</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-group">
+                    <h2>Nos recomiendas</h2>
+                    <label for="tal-vez"><input type="radio" name="recomendar" id="tal-vez" value="tal-vez" class="input-radio" checked />Tal vez</label>
+                    <label for="claro"><input type="radio" name="recomendar" id="claro" value="claro" class="input-radio" />Claro</label>
+                    <label for="no-gracias"><input type="radio" name="recomendar" id="no-gracias" value="no-gracias" class="input-radio" />No gracias</label>
+                </fieldset> 
+                <fieldset class="form-group">
+                    <h2>¿Que es lo que te gustaria ver en tu localidad?</h2>
+                    <label for="pabimentacion"><input type="checkbox" name="estado" id="pabimentacion" value="pabimentacion" class="input-checkbox"> Pabimentación</label>
+                    <label for="parque"><input type="checkbox" name="estado" id="parque" value="parque" class="input-checkbox"> Parque</label>
+                    <label for="cemaforos"><input type="checkbox" name="estado" id="cemaforos" value="cemaforos" class="input-checkbox"> Cemaforos</label>
+                    <label for="locales"><input type="checkbox" name="estado" id="locales" value="locales" class="input-checkbox"> Locales</label>
+                    <label for="plazas"><input type="checkbox" name="estado" id="plazas" value="plazas" class="input-checkbox"> Plazas</label>
+                    <label for="monumentos"><input type="checkbox" name="estado" id="monumentos" value="monumentos" class="input-checkbox"> Monumentos</label>
+                    <label for="centros-de-salud"><input type="checkbox" name="estado" id="centros-de-salud" value="centros-de-salud" class="input-checkbox"> Centros de salud</label>
+                </fieldset>
+                <fieldset class="form-group">
+                    <p>Podria compartirnos sus comentarios, seran de gran ayuda para mejorar la pagina</p>
+                    <textarea id="comentarios" name="comentarios" cols="30" rows="10" class="input-textarea" placeholder="Me a encantado el servicio a cliente, es por eso que recomendare esta pagina a todos mis amigos" ></textarea>
+                </fieldset>
+                <button id="submit" class="botones"  type="submit">Enviar</button>        
+            </form>
+        </div>
+    </body>
+</html>

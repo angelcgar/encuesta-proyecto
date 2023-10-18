@@ -1,0 +1,193 @@
+/*:root declara variables en css*/
+:root {
+    --color-blanco: #f3f3f3;
+    --color-oscuroazul: #1b1b32;
+    --color-oscuroazul-alfa: rgba(27, 27, 50, 0.8);
+    --color-verde: #37af65;
+}
+/*hece que tu html este coherente con el tamaño*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-blanco);
+    margin: 0;
+}
+/*Solucion del fondo, con una propuesta para los telefonos*/
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-oscuroazul);
+    background-image: linear-gradient(
+            115deg,
+            rgba(86, 86, 198, 0.7), 
+            rgba(189, 189, 246, 0.6)
+        ), 
+        url("https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+#name-label {
+    margin-top: -2rem;
+}
+
+#name-label,
+#email-label,
+#number-label {
+    display: block;
+    font-size: 25px;
+    padding-top: -5px;
+    padding-bottom: 20px;
+}
+
+p {
+    font-size: 1.525rem;
+}
+
+h1, p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+/*Acomodamiento del cuestionario*/
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    border: none;
+}
+/*.clases?*/
+.container {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+}
+  
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+}
+  
+@media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+}
+
+.header {
+    padding: 25px 0.625rem;
+    margin-bottom: 0;
+}
+
+.description {
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.texto-centro {
+    text-align: center;
+}
+
+/*estilos del Formulario*/
+form {
+    background: var(--color-oscuroazul-alfa);
+    padding: 5.2rem 0.675rem;
+    border-radius: 0.25rem;
+    margin: 0 auto; /*Esto centrara en formulario*/
+    width: 90%;
+    max-width: 830px; /*Hara que no ocupe toda la pantalla*/
+    height: 1490px;
+    display: block;
+}
+
+@media (min-width: 480px) {
+    form {
+      padding: 2.5rem;
+    }
+  }
+
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+    border: none;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #f3f3f3;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+}
+
+.input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+}
+
+.botones {
+    display: block;
+    width: 99%;
+    height: 65px;
+    margin: 0 auto;
+    padding: 0.25rem;
+    background: var(--color-verde);
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+}
